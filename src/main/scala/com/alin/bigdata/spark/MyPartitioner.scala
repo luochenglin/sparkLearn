@@ -7,8 +7,8 @@ class MyPartitioner(numPartition : Int) extends Partitioner{
 
     override def getPartition(key: Any): Int = {
         key match {
-            case null => 0
-            case _ => key.hashCode()%(if(numPartition<=0) 1 else numPartition)
+            case "上半年" => 0
+            case _ => 1
         }
 
     }
